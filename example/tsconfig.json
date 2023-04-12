@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "expo-camera-characteristics": ["../src/index"],
+      "expo-camera-characteristics/*": ["../src/*"]
+    }
+  }
+}
