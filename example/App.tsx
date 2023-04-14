@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
 
-import * as ExpoCameraCharacteristics from 'expo-camera-characteristics';
+import * as ExpoCameraCharacteristics from "expo-camera-characteristics";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{ExpoCameraCharacteristics.hello()}</Text>
+      <Text>Focal Length: {ExpoCameraCharacteristics.getFocalLength()}</Text>
+      <Text>Sensor height: {ExpoCameraCharacteristics.getSensorHeight()}</Text>
+      <Text>Sensor Width: {ExpoCameraCharacteristics.getSensorWidth()}</Text>
     </View>
   );
 }
@@ -13,8 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

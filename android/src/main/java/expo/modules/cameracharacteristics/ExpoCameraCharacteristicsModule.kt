@@ -1,47 +1,54 @@
 package expo.modules.cameracharacteristics
 
+
+import android.content.Context
+import android.hardware.camera2.CameraManager;
+import android.hardware.camera2.CameraCharacteristics;
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 
+
+
+
 class ExpoCameraCharacteristicsModule : Module() {
-  // Each module class must implement the definition function. The definition consists of components
-  // that describes the module's functionality and behavior.
-  // See https://docs.expo.dev/modules/module-api for more details about available components.
+
+
   override fun definition() = ModuleDefinition {
-    // Sets the name of the module that JavaScript code will use to refer to the module. Takes a string as an argument.
-    // Can be inferred from module's class name, but it's recommended to set it explicitly for clarity.
-    // The module will be accessible from `requireNativeModule('ExpoCameraCharacteristics')` in JavaScript.
     Name("ExpoCameraCharacteristics")
 
-    // Sets constant properties on the module. Can take a dictionary or a closure that returns a dictionary.
-    Constants(
-      "PI" to Math.PI
-    )
 
-    // Defines event names that the module can send to JavaScript.
-    Events("onChange")
 
-    // Defines a JavaScript synchronous function that runs the native code on the JavaScript thread.
-    Function("hello") {
-      "Hello world! 👋"
+    Function("getFocalLength") {
+      val cameraManager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
+      val firstCameraId = cameraManager.cameraIdList[0]
+      val cameraCharacteristics = cameraManager.getCameraCharacteristics(firstCameraId) as CameraCharacteristics
+      val focalLength = (cameraCharacteristics.get(CameraCharacteristics.LENS_INFO_AVAILABLE_FOCAL_LENGTHS))?.get(0)
+      return@Function focalLength
     }
 
-    // Defines a JavaScript function that always returns a Promise and whose native code
-    // is by default dispatched on the different thread than the JavaScript runtime runs on.
-    AsyncFunction("setValueAsync") { value: String ->
-      // Send an event to JavaScript.
-      sendEvent("onChange", mapOf(
-        "value" to value
-      ))
+    Function("getSensorHeight") {
+      val cameraManager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
+      val firstCameraId = cameraManager.cameraIdList[0]
+      val cameraCharacteristics = cameraManager.getCameraCharacteristics(firstCameraId) as CameraCharacteristics
+      val sensorHeight = (cameraCharacteristics.get(CameraCharacteristics.SENSOR_INFO_PHYSICAL_SIZE))?.getHeight()
+     
+      return@Function sensorHeight
     }
 
-    // Enables the module to be used as a native view. Definition components that are accepted as part of
-    // the view definition: Prop, Events.
-    View(ExpoCameraCharacteristicsView::class) {
-      // Defines a setter for the `name` prop.
-      Prop("name") { view: ExpoCameraCharacteristicsView, prop: String ->
-        println(prop)
-      }
+    Function("getSensorWidth") {
+      val cameraManager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
+      val firstCameraId = cameraManager.cameraIdList[0]
+      val cameraCharacteristics = cameraManager.getCameraCharacteristics(firstCameraId) as CameraCharacteristics
+      val sensorWidth = (cameraCharacteristics.get(CameraCharacteristics.SENSOR_INFO_PHYSICAL_SIZE))?.getWidth()
+     
+      return@Function sensorWidth
     }
   }
+
+  private val context
+  get() = requireNotNull(appContext.reactContext)
+
+
+
+
 }
