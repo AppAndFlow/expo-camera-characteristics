@@ -1,21 +1,21 @@
 import ExpoCameraCharacteristicsModule from "./ExpoCameraCharacteristicsModule";
 
-export function getFocalLength(): string {
+export function getFocalLength(): number {
   return ExpoCameraCharacteristicsModule.getFocalLength();
 }
 
-export function getSensorHeight(): string {
+export function getSensorHeight(): number {
   return ExpoCameraCharacteristicsModule.getSensorHeight();
 }
 
-export function getSensorWidth(): string {
+export function getSensorWidth(): number {
   return ExpoCameraCharacteristicsModule.getSensorWidth();
 }
 
-export function getImageResolutionHeight(): string {
+export function getImageResolutionHeight(): number {
   return ExpoCameraCharacteristicsModule.getImageResolutionHeight();
 }
 
-export function getImageResolutionWidth(): string {
+export function getImageResolutionWidth(): number {
   return ExpoCameraCharacteristicsModule.getImageResolutionWidth();
 }
