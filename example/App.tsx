@@ -8,6 +8,14 @@ export default function App() {
       <Text>Focal Length: {ExpoCameraCharacteristics.getFocalLength()}</Text>
       <Text>Sensor height: {ExpoCameraCharacteristics.getSensorHeight()}</Text>
       <Text>Sensor Width: {ExpoCameraCharacteristics.getSensorWidth()}</Text>
+      <Text>
+        Image Resolution Height:{" "}
+        {ExpoCameraCharacteristics.getImageResolutionHeight()}
+      </Text>
+      <Text>
+        Image Resolution Width:{" "}
+        {ExpoCameraCharacteristics.getImageResolutionWidth()}
+      </Text>
     </View>
   );
 }

@@ -11,3 +11,11 @@ export function getSensorHeight(): string {
 export function getSensorWidth(): string {
   return ExpoCameraCharacteristicsModule.getSensorWidth();
 }
+
+export function getImageResolutionHeight(): string {
+  return ExpoCameraCharacteristicsModule.getImageResolutionHeight();
+}
+
+export function getImageResolutionWidth(): string {
+  return ExpoCameraCharacteristicsModule.getImageResolutionWidth();
+}
