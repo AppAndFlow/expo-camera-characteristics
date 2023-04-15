@@ -1,7 +1,7 @@
 {
-  "name": "expo-camera-characteristics",
-  "version": "0.1.0",
-  "description": "My new module",
+  "name": "@appandflow/expo-camera-characteristics",
+  "version": "0.0.1",
+  "description": "Expo Camera Characteristics",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
