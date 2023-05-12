@@ -6,7 +6,7 @@ This library exposes the rear camera's characteristics such as the sensor size, 
 
 **On Android**, the Camera2 module is used to get the camera characteristics programmatically.
 
-**On iOS**, there is no accessible module to do so (see https://stackoverflow.com/questions/13190932/how-to-find-out-focal-length-of-camera-in-ios-and-what-is-the-sensor-height for the existing work around), therefore, the values returned by the library are hardcoded here: https://github.com/AppAndFlow/expo-camera-characteristics/blob/main/src/iPhoneSpecs.ts. We'll try to maintain that list up to date as much as possible.
+**On iOS**, there is no accessible module to do so (see https://stackoverflow.com/questions/13190932/how-to-find-out-focal-length-of-camera-in-ios-and-what-is-the-sensor-height for the existing work around), therefore, the values returned by this library are hardcoded here: https://github.com/AppAndFlow/expo-camera-characteristics/blob/main/src/iPhoneSpecs.ts. We'll try to maintain that list of devices up to date as much as possible.
 
 # Installation
 
