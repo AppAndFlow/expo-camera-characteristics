@@ -27,6 +27,11 @@ You must also add this chunk to your app.json
 
 ```
 
+And finally, run
+```
+expo prebuild
+```
+
 # API documentation
 
 ## getCameraCharacteristics()
