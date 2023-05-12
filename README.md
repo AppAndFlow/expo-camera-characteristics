@@ -1,5 +1,7 @@
 # @appandflow/expo-camera-characteristics
 
+[![npm (scoped)](https://img.shields.io/npm/v/@appandflow/expo-camera-characteristics.svg)](https://www.npmjs.com/package/@appandflow/expo-camera-characteristics)
+
 Expo Camera Characteristics exposes the rear camera's characteristics such as the sensor size, the focal length and the image resolution. 
 
 **On Android**, the Camera2 module is used to get the camera characteristics programmatically. 
