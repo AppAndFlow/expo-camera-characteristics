@@ -1,9 +1,11 @@
 {
-  "platforms": ["ios", "android", "web"],
+  "platforms": ["ios", "android"],
   "ios": {
     "modules": ["ExpoCameraCharacteristicsModule"]
   },
   "android": {
-    "modules": ["expo.modules.cameracharacteristics.ExpoCameraCharacteristicsModule"]
+    "modules": [
+      "expo.modules.cameracharacteristics.ExpoCameraCharacteristicsModule"
+    ]
   }
 }

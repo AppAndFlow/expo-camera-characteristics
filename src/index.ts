@@ -1,21 +1,60 @@
+import { Platform } from "react-native";
 import ExpoCameraCharacteristicsModule from "./ExpoCameraCharacteristicsModule";
+import iPhoneSpecs from "./iPhoneSpecs";
+import * as Device from "expo-device";
 
-export function getFocalLength(): number {
+const deviceModelName = Device.modelName || "";
+const iphoneCharacteristics = iPhoneSpecs?.[deviceModelName] || {
+  focalLength: 0,
+  sensorSize: { height: 0, width: 0 },
+  imageResolution: { height: 0, width: 0 },
+};
+
+function getFocalLength(): number {
+  if (Platform.OS === "ios") {
+    return iphoneCharacteristics.focalLength;
+  }
   return ExpoCameraCharacteristicsModule.getFocalLength();
 }
 
-export function getSensorHeight(): number {
+function getSensorHeight(): number {
+  if (Platform.OS === "ios") {
+    return iphoneCharacteristics.sensorSize.height;
+  }
   return ExpoCameraCharacteristicsModule.getSensorHeight();
 }
 
-export function getSensorWidth(): number {
+function getSensorWidth(): number {
+  if (Platform.OS === "ios") {
+    return iphoneCharacteristics.sensorSize.width;
+  }
   return ExpoCameraCharacteristicsModule.getSensorWidth();
 }
 
-export function getImageResolutionHeight(): number {
+function getImageResolutionHeight(): number {
+  if (Platform.OS === "ios") {
+    return iphoneCharacteristics.imageResolution.height;
+  }
   return ExpoCameraCharacteristicsModule.getImageResolutionHeight();
 }
 
-export function getImageResolutionWidth(): number {
+function getImageResolutionWidth(): number {
+  if (Platform.OS === "ios") {
+    return iphoneCharacteristics.imageResolution.width;
+  }
   return ExpoCameraCharacteristicsModule.getImageResolutionWidth();
+}
+
+export function getCameraCharacteristics() {
+  return {
+    focalLength: getFocalLength(),
+    sensorSize: {
+      height: getSensorHeight(),
+      width: getSensorWidth(),
+    },
+    imageResolution: {
+      height: getImageResolutionHeight(),
+      width: getImageResolutionWidth(),
+    },
+  };
 }

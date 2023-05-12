@@ -1,6 +1,6 @@
 {
   "name": "@appandflow/expo-camera-characteristics",
-  "version": "0.0.1",
+  "version": "1.0.0-beta.1",
   "description": "Expo Camera Characteristics",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -38,6 +38,7 @@
   "peerDependencies": {
     "expo": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "expo-device": "*"
   }
 }
