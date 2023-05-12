@@ -16,7 +16,9 @@ This library needs expo-device for iOS.
 expo install @appandflow/expo-camera-characteristics expo-device
 ```
 
-You must also add this chunk to your app.json
+> This package cannot be used in the "Expo Go" app because [it requires custom native code](https://docs.expo.io/workflow/customizing/).
+
+After installing this npm package, add the [config plugin](https://docs.expo.io/guides/config-plugins/) to the [`plugins`](https://docs.expo.io/versions/latest/config/app/#plugins) array of your `app.json` or `app.config.js`:
 
 ```JSON
 {
@@ -27,7 +29,8 @@ You must also add this chunk to your app.json
 
 ```
 
-And finally, run
+And finally, rebuild your app as described in the ["Adding custom native code"](https://docs.expo.io/workflow/customizing/) guide.
+
 ```
 expo prebuild
 ```
