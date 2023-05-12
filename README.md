@@ -2,7 +2,7 @@
 
 [![npm (scoped)](https://img.shields.io/npm/v/@appandflow/expo-camera-characteristics.svg)](https://www.npmjs.com/package/@appandflow/expo-camera-characteristics)
 
-Expo Camera Characteristics exposes the rear camera's characteristics such as the sensor size, the focal length and the image resolution. 
+This library exposes the rear camera's characteristics such as the sensor size, the focal length and the image resolution. 
 
 **On Android**, the Camera2 module is used to get the camera characteristics programmatically. 
 
@@ -18,10 +18,10 @@ expo install @appandflow/expo-camera-characteristics expo-device
 ```
 You must also add this chunk to your app.json
 
-```
+```JSON
 {
 	"expo": {
-		plugins: [
+		"plugins": [
 			["@appandflow/expo-camera-characteristics", {}]
 		]
 	}
@@ -31,7 +31,7 @@ You must also add this chunk to your app.json
 # API documentation
 
 ## getCameraCharacteristics()
-```
+```JS
 import  *  as  expoCameraCharacteristics  from  '@appandflow/expo-camera-characteristics';
 
 const cameraCharacteristics: {  
