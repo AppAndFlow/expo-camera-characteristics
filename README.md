@@ -1,35 +1,46 @@
 # @appandflow/expo-camera-characteristics
 
-Expo Camera Characteristics
+Expo Camera Characteristics exposes the rear camera's characteristics such as the sensor size, the focal length and the image resolution. 
+
+**On Android**, the Camera2 module is used to get the camera characteristics programmatically. 
+
+**On iOS**, there is no accessible module to do so (see https://stackoverflow.com/questions/13190932/how-to-find-out-focal-length-of-camera-in-ios-and-what-is-the-sensor-height for the existing work around), therefore, the values returned by the library are hardcoded here: https://github.com/AppAndFlow/expo-camera-characteristics/blob/main/src/iPhoneSpecs.ts. We'll try to maintain that list up to date as much as possible.
+
+
+# Installation
+
+This library needs expo-device for iOS.
+
+```
+expo install @appandflow/expo-camera-characteristics expo-device
+```
+You must also add this chunk to your app.json
+
+```
+{
+	"expo": {
+		plugins: [
+			["@appandflow/expo-camera-characteristics", {}]
+		]
+	}
+}
+```
 
 # API documentation
 
-- [Documentation for the main branch](https://github.com/expo/expo/blob/main/docs/pages/versions/unversioned/sdk/@appandflow/camera-characteristics.md)
-- [Documentation for the latest stable release](https://docs.expo.dev/versions/latest/sdk/@appandflow/camera-characteristics/)
-
-# Installation in managed Expo projects
-
-For [managed](https://docs.expo.dev/versions/latest/introduction/managed-vs-bare/) Expo projects, please follow the installation instructions in the [API documentation for the latest stable release](#api-documentation). If you follow the link and there is no documentation available then this library is not yet usable within managed projects &mdash; it is likely to be included in an upcoming Expo SDK release.
-
-# Installation in bare React Native projects
-
-For bare React Native projects, you must ensure that you have [installed and configured the `expo` package](https://docs.expo.dev/bare/installing-expo-modules/) before continuing.
-
-### Add the package to your npm dependencies
-
+## getCameraCharacteristics()
 ```
-npm install @appandflow/expo-camera-characteristics
+import  *  as  expoCameraCharacteristics  from  '@appandflow/expo-camera-characteristics';
+
+const cameraCharacteristics: {  
+	focalLength: number;  
+	sensorSize: {  
+		height: number;  
+		width: number;  
+	};  
+	imageResolution: {  
+		height: number;  
+		width: number;  
+	}
+} = expoCameraCharacteristics.getCameraCharacteristics();
 ```
-
-### Configure for iOS
-
-Run `npx pod-install` after installing the npm package.
-
-
-### Configure for Android
-
-
-
-# Contributing
-
-Contributions are very welcome! Please refer to guidelines described in the [contributing guide]( https://github.com/expo/expo#contributing).
