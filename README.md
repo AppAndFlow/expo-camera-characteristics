@@ -31,7 +31,7 @@ You must also add this chunk to your app.json
 
 ## getCameraCharacteristics()
 
-```JS
+```TS
 import * as expoCameraCharacteristics from "@appandflow/expo-camera-characteristics";
 
 const cameraCharacteristics: {
