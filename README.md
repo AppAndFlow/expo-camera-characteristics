@@ -32,7 +32,7 @@ After installing this npm package, add the [config plugin](https://docs.expo.io/
 And finally, rebuild your app as described in the ["Adding custom native code"](https://docs.expo.io/workflow/customizing/) guide.
 
 ```
-expo prebuild
+npx expo prebuild
 ```
 
 # API documentation
