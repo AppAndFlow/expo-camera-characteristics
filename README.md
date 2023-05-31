@@ -13,15 +13,15 @@ This library exposes the rear camera's characteristics such as the sensor size, 
 
 # Installation
 
-This library needs expo-device for iOS.
+This library needs `expo-device` for iOS.
 
 ```
-expo install @appandflow/expo-camera-characteristics expo-device
+npx expo install @appandflow/expo-camera-characteristics expo-device
 ```
 
-> This package cannot be used in the "Expo Go" app because [it requires custom native code](https://docs.expo.io/workflow/customizing/).
+> This package cannot be used in the "Expo Go" app because [it requires custom native code](https://docs.expo.dev/workflow/customizing/).
 
-After installing this npm package, add the [config plugin](https://docs.expo.io/guides/config-plugins/) to the [`plugins`](https://docs.expo.io/versions/latest/config/app/#plugins) array of your `app.json` or `app.config.js`:
+After installing this npm package, add the [config plugin](https://docs.expo.dev/config-plugins/introduction/) to the [`plugins`](https://docs.expo.dev/versions/latest/config/app/#plugins) array of your `app.json` or `app.config.js`:
 
 ```JSON
 {
@@ -32,7 +32,7 @@ After installing this npm package, add the [config plugin](https://docs.expo.io/
 
 ```
 
-And finally, rebuild your app as described in the ["Adding custom native code"](https://docs.expo.io/workflow/customizing/) guide.
+And finally, rebuild your app as described in the ["Adding custom native code"](https://docs.expo.dev/workflow/customizing/) guide.
 
 ```
 npx expo prebuild
