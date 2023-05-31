@@ -1,4 +1,7 @@
-# @appandflow/expo-camera-characteristics
+![github_readme_banner](https://github.com/AppAndFlow/expo-camera-characteristics/assets/7192823/b5aef389-7921-48d9-8da1-627c9623e2b6)
+
+App & Flow is a Montreal-based, close-knit team that specializes in React Native/Expo development. Need a hand? Let’s build together! team@appandflow.com
+
 
 [![npm (scoped)](https://img.shields.io/npm/v/@appandflow/expo-camera-characteristics.svg)](https://www.npmjs.com/package/@appandflow/expo-camera-characteristics)
 
