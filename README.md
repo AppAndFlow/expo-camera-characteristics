@@ -13,6 +13,8 @@ This library exposes the rear camera's characteristics such as the sensor size, 
 
 # Installation
 
+For Expo SDK <= 48 use <= `expo-camera-characteristics 1.0.0`
+
 This library needs `expo-device` for iOS.
 
 ```
