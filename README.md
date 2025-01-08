@@ -1,6 +1,7 @@
-![github_readme_banner](https://github.com/AppAndFlow/expo-camera-characteristics/assets/7192823/b5aef389-7921-48d9-8da1-627c9623e2b6)
+![camera](https://github.com/user-attachments/assets/5db566c2-fdec-446f-a366-b74798f94f54)
 
-App & Flow is a Montreal-based, close-knit team that specializes in React Native/Expo development. Need a hand? Let’s build together! team@appandflow.com
+### About
+App & Flow is a Montreal-based React Native engineering and consulting studio. We partner with the world’s top companies and are recommended by [Expo](https://expo.dev/consultants). Need a hand? Let’s build together. team@appandflow.com
 
 
 [![npm (scoped)](https://img.shields.io/npm/v/@appandflow/expo-camera-characteristics.svg)](https://www.npmjs.com/package/@appandflow/expo-camera-characteristics)
